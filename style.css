@@ -1,5 +1,5 @@
 html {
-  box-sizing: border-box;
+
   background: #eeeeee;
   font-family: 'helvetica neue';
   font-size: 20px;
@@ -51,7 +51,7 @@ header {
 
 h1 {
   color: black;
-  font-size: 7vw;
+  font-size: 75px;
   text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
 }
 
@@ -115,79 +115,68 @@ nav a {
 
 /*Clock*/
 
-@-webkit-keyframes spinnerClockMinRotate {
-  0% {
-    transform: rotate(0deg) translate(0, -18px);
-  }
-  100% {
-    transform: rotate(360deg) translate(0, -18px);
-  }
-}
-
-@keyframes spinnerClockMinRotate {
-  0% {
-    transform: rotate(0deg) translate(0, -18px);
-  }
-  100% {
-    transform: rotate(0deg) translate(0, -18px);
-  }
-
-}
-
 @-webkit-keyframes spinnerClockSecRotate {
   0% {
-    transform: rotate(360deg) translate(0, -22px);
+    transform: rotate(360deg) translate(0px, 0px);
   }
   100% {
-    transform: rotate(0deg) translate(0, -22px);
+    transform: rotate(0deg) translate(0px, 0px);
   }
 }
 
 @keyframes spinnerClockSecRotate {
   0% {
-    transform: rotate(360deg) translate(0, -22px);
+    transform: rotate(360deg) translate(0px, 0px);
   }
   100% {
-    transform: rotate(0deg) translate(0, -22px);
+    transform: rotate(0deg) translate(0px, 0px);
   }
 }
 
-.spinnerClock {
-  background: none;
-  position: relative;
-  width: 128px;
-  height: 128px;
 
-  
+.clock {
+  width: 5px;
+  height: 5px;
+  border: 7px solid black;
+  border-radius: 50%;
+  position: relative;
+  padding: 1em;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #b30000,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
 }
 
-.spinnerClock__clock {
-  position: absolute;
+.clock-face {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 10px solid black;
-  box-sizing: border-box;
+  transform: translateY(-3px); 
 }
 
-.spinnerClock__minHand {
-  position: absolute;
-  width: 8px;
-  height: 40px;
-  top: 44px;
-  left: 60px;
+.hand {
+  width: 370%;
+  height: 6px;
   background: black;
-  border-radius: 5px;
-  animation: spinnerClockMinRotate 60s linear infinite;
+  position: absolute;
+  top: 50%;
+  right:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
 }
 
-.spinnerClock__secHand {
-  position: absolute;
-  width: 4px;
-  height: 48px;
-  top: 40px;
-  left: 62px;
-  background: black;
-  border-radius: 2px;
+.second-hand {
   animation: spinnerClockSecRotate 6s linear infinite;
+  border-radius: 5px;
+  height:100%
 }
+
+.minute-hand {
+  border-radius: 5px;
+  height:100%;
+  top:85%;
+}
+
