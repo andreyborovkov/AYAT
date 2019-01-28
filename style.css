@@ -43,8 +43,14 @@ header {
   justify-content: center;
 }
 
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
-  color: white;
+  color: black;
   font-size: 7vw;
   text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
 }
@@ -102,4 +108,86 @@ nav a {
   color: white;
   transition: all 0.2s;
   text-transform: uppercase;
+}
+
+
+
+
+/*Clock*/
+
+@-webkit-keyframes spinnerClockMinRotate {
+  0% {
+    transform: rotate(0deg) translate(0, -18px);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -18px);
+  }
+}
+
+@keyframes spinnerClockMinRotate {
+  0% {
+    transform: rotate(0deg) translate(0, -18px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, -18px);
+  }
+
+}
+
+@-webkit-keyframes spinnerClockSecRotate {
+  0% {
+    transform: rotate(360deg) translate(0, -22px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, -22px);
+  }
+}
+
+@keyframes spinnerClockSecRotate {
+  0% {
+    transform: rotate(360deg) translate(0, -22px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, -22px);
+  }
+}
+
+.spinnerClock {
+  background: none;
+  position: relative;
+  width: 128px;
+  height: 128px;
+
+  
+}
+
+.spinnerClock__clock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid black;
+  box-sizing: border-box;
+}
+
+.spinnerClock__minHand {
+  position: absolute;
+  width: 8px;
+  height: 40px;
+  top: 44px;
+  left: 60px;
+  background: black;
+  border-radius: 5px;
+  animation: spinnerClockMinRotate 60s linear infinite;
+}
+
+.spinnerClock__secHand {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  top: 40px;
+  left: 62px;
+  background: black;
+  border-radius: 2px;
+  animation: spinnerClockSecRotate 6s linear infinite;
 }
