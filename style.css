@@ -137,13 +137,13 @@ nav a {
 .clock {
   width: 5px;
   height: 5px;
-  border: 7px solid black;
+  border: 6px solid black;
   border-radius: 50%;
   position: relative;
   padding: 1em;
   box-shadow:
     0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px #b30000,
+    inset 0 0 0 0 black,
     inset 0 0 10px black,
     0 0 10px rgba(0,0,0,0.2);
 }
@@ -180,3 +180,17 @@ nav a {
   top:85%;
 }
 
+.circle {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  position: relative;
+  padding: 3em;
+  background:url("https://hkgame.files.wordpress.com/2018/03/rain.gif");
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+}
+
+.circle:hover {
+width: 580px;
+}
