@@ -1,5 +1,4 @@
 html {
-
   background: #eeeeee;
   font-family: 'helvetica neue';
   font-size: 20px;
@@ -15,18 +14,21 @@ body {
 }
 
 .site-wrap {
-  max-width: 700px;
-  margin: 70px auto;
-  background: white;
+  margin: 0 auto;
+  max-width: 60%;
+  background: black;
   padding: 40px;
   text-align: justify;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
   transform: scale(0.98);
   transition: transform 0.5s;
+  opacity: 0.8;
+  color:white;
 }
 
 .site-wrap img{
-  width: 400px;
+  width: 300px;
+  opacity:12;
 }
 
 .fixed-nav .site-wrap {
@@ -46,15 +48,15 @@ header {
 #title {
   display: flex;
   flex-direction: column;
-  margin-right: 5em;
-
+  margin-right: 7.5em;
+  transition-duration: 1000;
 }
 
 #today{
   display:flex;
   align-items: center;
   justify-content: center;
-  margin-left: 15em;
+  margin-left: 16em;
 }
 
 .ago {
@@ -126,7 +128,28 @@ nav a:hover{
   color:red;
 }
 
+h2 {
+  text-align: center;
+}
 
+.about {
+  background: url("https://wallpaperbrowse.com/media/images/black-wallpapers-high-quality-Is-Cool-Wallpapers.jpg");
+  background-attachment: fixed;
+  padding-bottom:3em;
+}
+
+.gallery {
+  padding:3em 0;
+  background: url("https://images.pexels.com/photos/518389/pexels-photo-518389.jpeg?cs=srgb&dl=audience-band-blur-518389.jpg&fm=jpg");
+  background-attachment: fixed;
+}
+
+.contact {
+  padding:3em 0;
+  background:url("https://www.woodstockoperahouse.com/sites/default/files/imageattachments/operahouse/page/8541/songwriter_open_mic_pic.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
 
 
 /*Clock*/
