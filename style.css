@@ -26,23 +26,19 @@ body {
   color:white;
 }
 
-.site-wrap img{
-  width: 300px;
-  opacity:12;
-}
-
 .fixed-nav .site-wrap {
   transform: scale(1);
 }
 
 header {
   text-align: center;
-  height: 70vh;
+  height: 65vh;
   background: #b30000 bottom center no-repeat;
-  background-size: cover;
+  background: url("https://ak1.picdn.net/shutterstock/videos/6983521/thumb/1.jpg") ;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 #title {
@@ -60,11 +56,11 @@ header {
 }
 
 .ago {
-  color: white;
+  color: #b30000;
 }
 
 h1 {
-  color: black;
+  color: white;
   font-size: 75px;
   text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
   margin: 0 0;
@@ -144,12 +140,47 @@ h2 {
   background-attachment: fixed;
 }
 
+div.polaroid {
+  width: 284px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 5px 5px 5px #aaaaaa;
+
+}
+
+div.rotate_right {
+  float: left;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+  position: absolute;  
+  transition: transform 0.5s;
+}
+div.rotate_right:hover {
+  transform: translateX(-200px);
+}
+
+
+div.rotate_left {
+  float: left;
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+
+.caption {
+  color:black;
+}
+
 .contact {
   padding:3em 0;
   background:url("https://www.woodstockoperahouse.com/sites/default/files/imageattachments/operahouse/page/8541/songwriter_open_mic_pic.jpg");
   background-position: center;
   background-attachment: fixed;
 }
+
+
 
 
 /*Clock*/
@@ -176,14 +207,14 @@ h2 {
 .clock {
   width: 5px;
   height: 5px;
-  border: 6px solid white;
+  border: 6px solid #b30000;
   border-radius: 50%;
   position: relative;
   padding: 1em;
   box-shadow:
     0 0 0 4px rgba(0,0,0,0.1),
     inset 0 0 0 0 black,
-    inset 0 0 10px white,
+    inset 0 0 10px #b30000,
     0 0 10px rgba(0,0,0,0.2);
 }
 
@@ -197,7 +228,7 @@ h2 {
 .hand {
   width: 370%;
   height: 6px;
-  background: white;
+  background: #b30000;
   position: absolute;
   top: 50%;
   right:50%;
@@ -222,7 +253,7 @@ h2 {
 .circle {
   width: 10px;
   height: 10px;
-  border: 1px solid white;
+  border: 1px solid #b30000;
   position: relative;
   padding: 3em;
   background:url("https://hkgame.files.wordpress.com/2018/03/rain.gif");
@@ -233,3 +264,6 @@ h2 {
 .circle:hover {
 width: 580px;
 }
+
+
+
