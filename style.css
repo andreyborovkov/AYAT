@@ -133,6 +133,9 @@ h2 {
   background-attachment: fixed;
   padding-bottom:3em;
 }
+.polaroidImages {
+  padding-right: 2em;
+}
 
 .gallery {
   padding:3em 0;
